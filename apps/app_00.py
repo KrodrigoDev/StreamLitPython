@@ -88,9 +88,9 @@ for action in actions_selecet:
     perfomance_action = float((df[action].iloc[-1] - df[action].iloc[0]))
 
     if perfomance_action > 0:
-        text_actions += f'  \n{action}: :green[R${perfomance_action:.2f}]'
+        text_actions += f'  \n{action}: :green[R$ {perfomance_action:.2f}]'
     elif perfomance_action <= 0:
-        text_actions += f'  \n{action}: :red[R${perfomance_action:.2f}]'
+        text_actions += f'  \n{action}: :red[R$ {perfomance_action:.2f}]'
 
 st.write(f"""
 ### Perfomance of crypto
