@@ -28,7 +28,7 @@ def load_data(tickets_enterprises: List) -> pd.DataFrame:
 
 @st.cache_data
 def load_tickets() -> pd.DataFrame:
-    actions = pd.read_csv('files/cryptocurrencies.csv')
+    actions = pd.read_csv('../files/cryptocurrencies.csv')
 
     return actions
 
@@ -57,7 +57,7 @@ st.sidebar.header('filters')
 
 # filter actions (exemplo do filtro dentro do side bar)
 actions_selecet = st.sidebar.multiselect('Select crypto to view: ', df.columns)
-print(actions_selecet)
+
 if actions_selecet:
     df = df[actions_selecet]
 
