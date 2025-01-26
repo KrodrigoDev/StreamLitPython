@@ -48,7 +48,7 @@ df = load_main()
 
 # views
 st.title(f"""
-Update of crypto closing prices over the years
+Update of crypto closing prices over the time
 """)
 
 # side bar (barra lateral).
