@@ -73,6 +73,12 @@ date_filter = st.sidebar.slider('Select the period', min_value=date_initial, max
 # filtrando por linhas
 df = df.loc[date_filter[0]:date_filter[1]]
 
+st.sidebar.header('other')
+if st.sidebar.button('Update API data'):
+    with st.spinner("Updating data..."):
+        st.cache_data.clear()
+    st.success("Data updated successfully!")
+
 # mostrando o gráfico
 st.line_chart(df)
 
