@@ -2,3 +2,6 @@
 base = "dark"
 
 font = "serif"
+
+[server]
+headless = true
