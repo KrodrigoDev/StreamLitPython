@@ -36,7 +36,7 @@ seats = generate_seat()
 st.subheader('Step One')
 with st.container(border=True):
     c1, c2, c3 = st.columns(3)
-    c1.container(border=True).metric('Total seats', len(seats))
+    c1.container(border=True).metric(f'Total seatss', len(seats))
 
     for condition, column in zip(['seat open', 'seat closed'], [c2, c3]):
         column.container(border=True).metric(condition, len(filter_seats(seats, [condition])))
@@ -79,3 +79,6 @@ with st.container(border=True):
     seats = selected_seats(seats)
 
     st.json(seats)
+
+
+st.code()

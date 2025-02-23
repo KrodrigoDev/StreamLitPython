@@ -28,7 +28,7 @@ def load_data(tickets_enterprises: List) -> pd.DataFrame:
 
 @st.cache_data
 def load_tickets() -> pd.DataFrame:
-    actions = pd.read_csv('cryptocurrencies.csv')
+    actions = pd.read_csv('files/cryptocurrencies.csv')
 
     return actions
 
